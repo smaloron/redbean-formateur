@@ -1,0 +1,15 @@
+{% extends "base-layout.html.twig" %}
+
+{% block content %}
+    <table class="table">
+        <tr>
+            <th>Prénom</th>
+            <td>{{ person.firstName }}</td>
+        </tr>
+        <tr>
+            <th>Nom</th>
+            <td>{{ person.lastName }}</td>
+        </tr>
+    </table>
+
+{% endblock %}

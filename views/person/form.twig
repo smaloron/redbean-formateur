@@ -1,0 +1,22 @@
+{% extends "base-layout.html.twig" %}
+
+{% block content %}
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">Prénom</label>
+            <input class="form-control" type="text" name="firstName">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nom</label>
+            <input class="form-control" type="text" name="lastName">
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary w-100">
+                Valider
+            </button>
+        </div>
+
+    </form>
+
+{% endblock %}
