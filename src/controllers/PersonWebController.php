@@ -9,23 +9,16 @@ use Psr\Http\Message\ServerRequestInterface;
 class PersonWebController extends AbstractWebController {
 
     private function getOnePersonFromId($id){
-        $person = R::load("person", $id);
+        if(! empty($id)){
+            $person = R::load("person", $id);
         
-        if(! empty($person->address_id)){
-            $address = R::load("address", $person->address_id);
-            $person->address = $address;
+            if(! empty($person->address_id)){
+                $address = R::load("address", $person->address_id);
+                $person->address = $address;
+            } 
+        
         } else {
-            $person = [
-                "id" => null,
-                "firstName" => "",
-                "lastName" => "",
-                "address" => [
-                    "id" => null,
-                    "street" => "",
-                    "zipCode" => "",
-                    "city" => ""
-                ]
-            ];
+            $person = null;
         }
 
         return $person;
