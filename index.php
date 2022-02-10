@@ -9,11 +9,8 @@ R::setup(
     "1234"
 );
 
-$person = R::dispense("person");
-$person->lastName = "Brahé";
-$person->firstname = "Tycho";
+$person = R::load("person", 6);
 
-R::store($person);
 
 var_dump($person);
 

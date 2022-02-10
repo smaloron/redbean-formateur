@@ -10,6 +10,21 @@
             <th>Nom</th>
             <td>{{ person.lastName }}</td>
         </tr>
+
+        <tr>
+            <th>Rue</th>
+            <td>{{ person.address.street }}</td>
+        </tr>
+
+        <tr>
+            <th>Code postal</th>
+            <td>{{ person.address.zipCode }}</td>
+        </tr>
+
+        <tr>
+            <th>Ville</th>
+            <td>{{ person.address.city }}</td>
+        </tr>
     </table>
 
 {% endblock %}

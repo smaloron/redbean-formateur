@@ -10,6 +10,7 @@
     <tr>
         <th>Prénom</th>
         <th>Nom</th>
+        <th></th>
     </tr>
     {% for item in personList %}
         <tr>
@@ -19,6 +20,11 @@
                 </a>
             </td>
             <td>{{ item.lastName }}</td>
+            <td>
+                <a href="/person/form/{{ item.id }}" class="btn btn-primary">
+                    modifier
+                </a>
+            </td>
         </tr>
     {% endfor %}
     </table>
